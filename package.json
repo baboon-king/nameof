@@ -1,11 +1,54 @@
 {
   "name": "nameof",
-  "module": "index.ts",
+  "version": "0.0.0",
   "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "bun build.config.ts",
+    "prepublishOnly": "bun run build"
+  },
+  "keywords": [
+    "typescript",
+    "nameof",
+    "property",
+    "type-safe",
+    "refactor-safe",
+    "utility",
+    "literal-type",
+    "keyof",
+    "object-property",
+    "bun",
+    "ts"
+  ],
+  "author": "baboon-king",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/baboon-king/nameof.git"
+  },
+  "bugs": {
+    "url": "https://github.com/baboon-king/nameof/issues"
+  },
+  "homepage": "https://github.com/baboon-king/nameof#readme",
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "bun-dts": "^0.1.22"
   },
   "peerDependencies": {
     "typescript": "^5"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }
