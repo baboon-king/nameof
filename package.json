@@ -34,7 +34,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/baboon-king/nameof.git"
+    "url": "git+https://github.com/baboon-king/nameof.git"
   },
   "bugs": {
     "url": "https://github.com/baboon-king/nameof/issues"
