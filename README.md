@@ -15,16 +15,16 @@
 
 ```bash
 # With Bun
-bun add nameof
+bun add @nameof/nameof
 
 # Or with npm
-npm install nameof
+npm install @nameof/nameof
 ```
 
 ## 🚀 Usage
 
 ```ts
-import nameof from "nameof";
+import nameof from "@nameof/nameof";
 
 const user = {
   id: 1,
