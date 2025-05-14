@@ -131,7 +131,7 @@ const field = nameof<FormData>({} as FormData, "username");
 console.log(getLabel(field)); // Label for username
 ```
 
-## ❌ Why Not a Macro?
+## ❌ Why Not a Macro or Compiler?
 
 Some libraries implement `nameof(foo.bar)` using Babel or AST transforms. This package **deliberately avoids** those approaches.
 
@@ -146,6 +146,10 @@ Some libraries implement `nameof(foo.bar)` using Babel or AST transforms. This p
 - Works in **any environment** (Node, Bun, Vite, Webpack, etc.)
 - Transparent and reliable
 - Keeps your build chain simple
+
+### References
+
+- https://github.com/dsherret/ts-nameof/issues/121
 
 ## 🔧 Development
 
