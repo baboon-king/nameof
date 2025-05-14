@@ -44,9 +44,6 @@
     "@types/bun": "latest",
     "bun-dts": "^0.1.22"
   },
-  "peerDependencies": {
-    "typescript": "^5"
-  },
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
