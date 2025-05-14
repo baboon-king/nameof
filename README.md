@@ -164,7 +164,14 @@ bun run build
 
 ## 📄 License
 
-MIT © \[Your Name or GitHub username]
+[MIT License](https://github.com/nameof/nameof/blob/main/LICENSE) © 2025-PRESENT [BaboonKing](https://github.com/baboon-king)
+
+## 🌸 Thanks
+
+This project is heavily inspired by the following awesome projects.
+
+- [nameof expression (C# reference)](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/nameof)
+- [ts-nameof](https://github.com/dsherret/ts-nameof)
 
 ## 🙌 Contributing
 
