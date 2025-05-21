@@ -31,3 +31,19 @@ it("should return the name of the method property", () => {
   const fnName = nameof(obj, "jump");
   expect(fnName).toBe("jump");
 });
+
+it("should return the name of the class property", () => {
+  class Person {
+    name: string;
+    age: number;
+
+    constructor(name: string, age: number) {
+      this.name = name;
+      this.age = age;
+    }
+  }
+
+  const person = new Person("John", 30);
+  const name = nameof(person, "name");
+  expect(name).toBe("name");
+});
