@@ -15,7 +15,7 @@
   },
   "scripts": {
     "build": "bun build.config.ts",
-    "prepublishOnly": "bun run build",
+    "preversion": "bun test && bun run build",
     "release": "npm version patch && npm publish && git push && git push --tags"
   },
   "keywords": [
