@@ -40,8 +40,6 @@ console.log(`functionName: ${functionName}`);
 - ✅ **Preserves literal types**
 - ✅ **Refactor-friendly**
 - ✅ **Zero dependencies**
-- ✅ Designed for Bun (but works with any TypeScript setup)
-- ✅ Great for logging, forms, schemas, serialization, and more
 
 ## 📦 Installation
 
@@ -65,13 +63,6 @@ const user = {
 
 const propName = nameof(user, "name"); // "name"
 ```
-
-### Use Cases
-
-- 🐞 Logging: `console.log(nameof(user, "id"))`
-- 📄 JSON mapping / serializers
-- 🧪 Form handlers & validation schemas
-- 🔧 Column mapping / query builders
 
 ## 🧠 Why?
 
@@ -135,32 +126,6 @@ const key = nameof(config, "apiEndpoint"); // type: "apiEndpoint"
 ```
 
 Literal types are preserved in the result!
-
-## 📌 API
-
-```ts
-function nameof<T, K extends keyof T>(obj: T, key: K): K;
-```
-
-- `obj`: Used only for typing context
-- `key`: The property name to extract
-- **Returns**: The property name as a string literal (with preserved type)
-
-## 📋 Example: Forms
-
-```ts
-interface FormData {
-  username: string;
-  password: string;
-}
-
-function getLabel(field: keyof FormData) {
-  return `Label for ${field}`;
-}
-
-const field = nameof<FormData>({} as FormData, "username");
-console.log(getLabel(field)); // Label for username
-```
 
 ## ❌ Why Not a Macro or Compiler?
 
