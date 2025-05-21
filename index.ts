@@ -22,7 +22,7 @@ function nameof(arg1: any, arg2?: any): any {
   if (arguments.length === 1 && typeof arg1 === "object" && arg1 !== null) {
     const keys = Object.keys(arg1);
     if (keys.length !== 1) {
-      throw new Error("Object must have exactly one property");
+      throw new Error("Object must have exactly one string-key property");
     }
     return keys[0];
   }
