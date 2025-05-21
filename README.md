@@ -1,6 +1,6 @@
 # `nameof`
 
-> A tiny utility for safely extracting property names from TypeScript objects — inspired by C#'s `nameof` operator.
+A tiny utility for safely extracting property names from TypeScript objects — inspired by C#'s [`nameof`](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/nameof) operator.
 
 ## Examples
 
