@@ -58,3 +58,20 @@ it("should return the name of the static method property", () => {
   const fnName = nameof(Array, "isArray");
   expect(fnName).toBe("isArray");
 });
+
+it("should return the name of the built-in class", () => {
+  const fnName = nameof(Array);
+  expect(fnName).toBe("Array");
+});
+
+it("should return the name of the function", () => {
+  function bar() {}
+  const fnName = nameof(bar);
+  expect(fnName).toBe("bar");
+});
+
+it("should return the name of the class", () => {
+  class Foo {}
+  const fnName = nameof(Foo);
+  expect(fnName).toBe("Foo");
+});
