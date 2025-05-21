@@ -13,3 +13,9 @@ it("should return the name of the property with a different type", () => {
   const age = nameof(obj, "age");
   expect(age).toBe("age");
 });
+
+it("should return the name of the property using generic type", () => {
+  const obj = { name: "John", age: 30 } as const;
+  const name = nameof<typeof obj>("name");
+  expect(name).toBe("name");
+});
