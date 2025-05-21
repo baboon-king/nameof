@@ -47,3 +47,9 @@ it("should return the name of the class property", () => {
   const name = nameof(person, "name");
   expect(name).toBe("name");
 });
+
+it("should return the name of the variable property", () => {
+  const numbers = [1, 2, 3, 4, 5];
+  const varName = nameof({ numbers });
+  expect(varName).toBe("numbers");
+});
