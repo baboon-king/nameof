@@ -169,6 +169,7 @@ This project is heavily inspired by the following awesome projects.
 - [nameof expression (C# reference)](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/nameof)
 - [ts-nameof](https://github.com/dsherret/ts-nameof)
 - [ts-keyof](https://github.com/sotnikov-link/ts-keyof)
+- [ts-simple-nameof](https://github.com/IRCraziestTaxi/ts-simple-nameof)
 
 ## 🙌 Contributing
 
