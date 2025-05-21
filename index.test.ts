@@ -53,3 +53,8 @@ it("should return the name of the variable property", () => {
   const varName = nameof({ numbers });
   expect(varName).toBe("numbers");
 });
+
+it("should return the name of the static method property", () => {
+  const fnName = nameof(Array, "isArray");
+  expect(fnName).toBe("isArray");
+});
