@@ -1,6 +1,6 @@
 function nameof<T extends Function>(fn: T): string;
+function nameof<T extends object>(key: keyof T): keyof T;
 function nameof<T extends object>(obj: T): keyof T;
-function nameof<T extends object, K extends keyof T = keyof T>(key: K): K;
 function nameof<T extends object, K extends keyof T = keyof T>(
   obj: T,
   key: K
