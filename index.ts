@@ -6,7 +6,12 @@ function nameof<T extends object, K extends keyof T = keyof T>(
   key: K
 ): K;
 function nameof(arg1: any, arg2?: any): any {
-  if (arguments.length === 2 && arg1 !== null && typeof arg2 === "string") {
+  if (
+    arguments.length === 2 &&
+    (typeof arg1 === "object" || typeof arg1 === "function") &&
+    arg1 !== null &&
+    typeof arg2 === "string"
+  ) {
     return arg2;
   }
 
