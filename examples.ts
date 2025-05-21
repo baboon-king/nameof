@@ -1,20 +1,27 @@
 // for README.md
+// https://www.typescriptlang.org/play
 import nameof from "@nameof/nameof";
 
-const obj = {
-  name: "John",
-  age: 30,
-};
-console.log(nameof(obj, "name")); // output: name
+// basic
+const obj = { name: "John", age: 30 };
+const keyName = nameof(obj, "name");
+console.log(`keyName: ${keyName}`);
 
-type Obj = typeof obj;
-console.log(nameof<Obj>("age")); // output: age
+// single key
+const keyName2 = nameof<typeof obj>("age");
+console.log(`keyName2: ${keyName2}`);
 
-console.log(nameof(Array)); // output: Array
-console.log(nameof(Array, "isArray")); // output: isArray
+// variable name
+const numbers = [1, 2, 3, 4, 5];
+const variableName = nameof({ numbers });
+console.log(`variableName: ${variableName}`);
 
-const numbers = new Array<number>(1, 2, 3);
-console.log(nameof({ numbers })); // output: numbers
+// Class Name
+class Person {}
+const className = nameof(Person);
+console.log(`className: ${className}`);
 
-const fn = () => {};
-console.log(nameof(fn)); // output: fn
+// Function Name
+function bar() {}
+const functionName = nameof(bar);
+console.log(`functionName: ${functionName}`);

@@ -7,24 +7,32 @@ A tiny utility for safely extracting property names from TypeScript objects — 
 ```ts
 import nameof from "@nameof/nameof";
 
-const obj = {
-  name: "John",
-  age: 30,
-};
-console.log(nameof(obj, "name")); // output: name
+// basic
+const obj = { name: "John", age: 30 };
+const keyName = nameof(obj, "name");
+console.log(`keyName: ${keyName}`);
 
-type Obj = typeof obj;
-console.log(nameof<Obj>("age")); // output: age
+// single key
+const keyName2 = nameof<typeof obj>("age");
+console.log(`keyName2: ${keyName2}`);
 
-console.log(nameof(Array)); // output: Array
-console.log(nameof(Array, "isArray")); // output: isArray
+// variable name
+const numbers = [1, 2, 3, 4, 5];
+const variableName = nameof({ numbers });
+console.log(`variableName: ${variableName}`);
 
-const numbers = new Array<number>(1, 2, 3);
-console.log(nameof({ numbers })); // output: numbers
+// Class Name
+class Person {}
+const className = nameof(Person);
+console.log(`className: ${className}`);
 
-const fn = () => {};
-console.log(nameof(fn)); // output: fn
+// Function Name
+function bar() {}
+const functionName = nameof(bar);
+console.log(`functionName: ${functionName}`);
 ```
+
+[Try Online (only type)](https://www.typescriptlang.org/play/?#code/JYWwDg9gTgLgBAOwIYgKYQGZw1CI4BEAAsmpgPSnoYEDcAUPeeXAEZIDOwAxvdxAg7wIrAFZwAvHADeiFKgBchAFIQAFggIAaOEgDmiuAGYADHAC+DfoPgBrVAE8AcvMlyyGABQjROglQIASgYmFi4EPQAbVDh7Bz4BIVjHFzQAJjcqTAAeGAcwajgfAD5PAn1UIJDmOAA3JChgJFZo91QEm0QAVxBWVCgONwBtAEYdNJ0jHQAWHQBWAF0rRPh6xubo1JipLK9ZBB6+gYtgxhqAYUjOQa2+K45BgAV+jgEZcw6k7nuOLcz5TCeZ4DATBOA1YGvBBnFgAMS6CG4MGAb1uGARSJRCDYDU8gXen3g6MRyIEfx2AK87CgYJq1PoQA)
 
 ## ✨ Features
 
