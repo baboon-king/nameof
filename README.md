@@ -40,10 +40,9 @@ console.log(nameof(fn)); // output: fn
 ```bash
 # With Bun
 bun add @nameof/nameof
-
-# Or with npm
-npm install @nameof/nameof
 ```
+
+[with `npm yarn pnpm or more`](/Installation.md)
 
 ## 🚀 Usage
 
