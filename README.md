@@ -143,7 +143,7 @@ Some libraries implement `nameof(foo.bar)` using Babel or AST transforms. This p
 - Transparent and reliable
 - Keeps your build chain simple
 
-### References
+### 🔗 References
 
 - https://github.com/dsherret/ts-nameof/issues/121
 
