@@ -42,7 +42,7 @@ console.log(nameof(fn)); // output: fn
 bun add @nameof/nameof
 ```
 
-[with `npm yarn pnpm or more`](/Installation.md)
+with `npm` `yarn` `pnpm` amd more [see here](/Installation.md)
 
 ## 🚀 Usage
 
