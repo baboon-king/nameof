@@ -19,3 +19,15 @@ it("should return the name of the property using generic type", () => {
   const name = nameof<typeof obj>("name");
   expect(name).toBe("name");
 });
+
+it("should return the name of the method property", () => {
+  const obj = {
+    name: "John",
+    age: 30,
+    jump() {
+      console.log("jump");
+    },
+  } as const;
+  const fnName = nameof(obj, "jump");
+  expect(fnName).toBe("jump");
+});
