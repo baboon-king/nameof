@@ -75,3 +75,47 @@ it("should return the name of the class", () => {
   const fnName = nameof(Foo);
   expect(fnName).toBe("Foo");
 });
+
+it("should return the name of the nested property", () => {
+  const obj = {
+    person: {
+      name: "John",
+      age: 30,
+    },
+  };
+  const name = nameof(obj, "person", "name");
+
+  expect(name).toBe("name");
+});
+
+it("should return the name of the nested method property", () => {
+  const obj = {
+    person: {
+      name: "John",
+      age: 30,
+      jump() {
+        console.log("jump");
+      },
+    },
+  };
+  const fnName = nameof(obj, "person", "jump");
+
+  expect(fnName).toBe("jump");
+});
+
+it("should return the name of the deeply nested property", () => {
+  const obj = {
+    level1: {
+      level2: {
+        level3: {
+          level4: {
+            name: "John",
+          },
+        },
+      },
+    },
+  };
+  const name = nameof(obj, "level1", "level2", "level3", "level4");
+
+  expect(name).toBe("level4");
+});
